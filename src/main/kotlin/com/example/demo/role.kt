@@ -1,14 +1,12 @@
 package com.example.demo
 
 import jakarta.persistence.*
-import org.springframework.data.annotation.Id
 import java.util.*
 
 @Entity
 @Table(name = "roles")
 class Role {
-    @Id
-    @GeneratedValue()
+    @Id @GeneratedValue @Column(name="role_id")
     var id: UUID? = null
 
     @Column(name = "role")

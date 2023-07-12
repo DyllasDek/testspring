@@ -21,7 +21,7 @@ class HelloController {
 	@GetMapping("/hello")
 	fun hello() = "Hello, world!"
 	@GetMapping("/roles")
-	fun getRoles() = roleRepository.getRoles()
+	fun getRoles() = roleRepository.findAllByRole("Admin")
 
 }
 

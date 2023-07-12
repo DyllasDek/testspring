@@ -6,6 +6,6 @@ import java.util.*
 
 @Repository
 interface RoleRepository : JpaRepository<Role, UUID>{
-    fun getRoles(): List<Role>
+    fun findAllByRole(role:String) : Role?
 
 }
